@@ -1,10 +1,10 @@
 # Scientific Manuscript Writing Skill
 
-[![Agent Skill](https://img.shields.io/badge/Agent-Skill-111827)](https://agentskills.io/specification)
+[![Reusable Skill](https://img.shields.io/badge/Reusable-Skill-111827)](https://agentskills.io/specification)
 [![GitHub stars](https://img.shields.io/github/stars/yizheng-hub/scientific-manuscript-writing-skill)](https://github.com/yizheng-hub/scientific-manuscript-writing-skill/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A portable Agent Skill for scientific manuscript writing, academic editing, narrative Supplementary Information (SI), publication figures, captions, verified references, reproducible plotting, and journal-ready Word deliverables.
+A reusable skill for scientific manuscript writing, academic editing, narrative Supplementary Information (SI), publication figures, captions, verified references, reproducible plotting, and journal-ready Word deliverables.
 
 It is designed for researchers who want one evidence-led workflow spanning manuscript structure, innovation and contribution framing, AI-defensive-writing removal, figure design, SI organization, reference verification, reader-role validation, and final DOCX formatting.
 
