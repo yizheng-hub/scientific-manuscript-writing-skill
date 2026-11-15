@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scientific Manuscript Writing"
+  short_description: "Research manuscripts, SI, figures, and Word formatting"
+  default_prompt: "Use $scientific-manuscript-writing to develop a clear, evidence-led manuscript and Supplementary Information."
+
+policy:
+  allow_implicit_invocation: true
