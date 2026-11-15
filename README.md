@@ -1,10 +1,10 @@
-# Scientific Manuscript Writing Skill for Codex
+# Scientific Manuscript Writing Skill
 
-[![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex)
+[![Agent Skill](https://img.shields.io/badge/Agent-Skill-111827)](https://agentskills.io/specification)
 [![GitHub stars](https://img.shields.io/github/stars/yizheng-hub/scientific-manuscript-writing-skill)](https://github.com/yizheng-hub/scientific-manuscript-writing-skill/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A reusable Codex skill for scientific manuscript writing, academic editing, narrative Supplementary Information (SI), publication figures, captions, verified references, reproducible plotting, and journal-ready Word deliverables.
+A portable Agent Skill for scientific manuscript writing, academic editing, narrative Supplementary Information (SI), publication figures, captions, verified references, reproducible plotting, and journal-ready Word deliverables.
 
 It is designed for researchers who want one evidence-led workflow spanning manuscript structure, innovation and contribution framing, AI-defensive-writing removal, figure design, SI organization, reference verification, reader-role validation, and final DOCX formatting.
 
@@ -21,27 +21,26 @@ The skill emphasizes:
 
 Extended Data is intentionally not part of the default structure because it is journal-specific. Add it only when the target journal requires it.
 
-## Install in Codex
+## Compatible agents
 
-### Option 1 — ask Codex to install it
+The core package follows the portable Agent Skills layout and does not depend on one model provider. It can be installed for Codex, Claude Code, Kimi CLI, and other agents supported by `gh skill install`.
 
-Send this prompt to Codex:
+| Agent | GitHub CLI installation |
+|---|---|
+| Codex | `gh skill install yizheng-hub/scientific-manuscript-writing-skill scientific-manuscript-writing --agent codex --scope user` |
+| Claude Code | `gh skill install yizheng-hub/scientific-manuscript-writing-skill scientific-manuscript-writing --agent claude-code --scope user` |
+| Kimi CLI | `gh skill install yizheng-hub/scientific-manuscript-writing-skill scientific-manuscript-writing --agent kimi-cli --scope user` |
 
-```text
-Use $skill-installer to install the public skill from
-https://github.com/yizheng-hub/scientific-manuscript-writing-skill.
-The skill path is skills/scientific-manuscript-writing.
-After installation, tell me when it will be available.
-```
+The optional `agents/openai.yaml` file supplies UI metadata for OpenAI hosts. Other agents ignore it and use the same `SKILL.md`, references, and assets.
 
-The installed skill is available on the next turn as `$scientific-manuscript-writing`.
+## Install
 
-### Option 2 — GitHub CLI
+### Option 1 — GitHub CLI
 
-Install it for Codex at user scope:
+Choose the agent identifier from the table above and install at user scope. For example:
 
 ```bash
-gh skill install yizheng-hub/scientific-manuscript-writing-skill scientific-manuscript-writing --agent codex --scope user
+gh skill install yizheng-hub/scientific-manuscript-writing-skill scientific-manuscript-writing --agent claude-code --scope user
 ```
 
 To check for later updates:
@@ -50,11 +49,25 @@ To check for later updates:
 gh skill update scientific-manuscript-writing
 ```
 
-This repository follows the standard `skills/<skill-name>/SKILL.md` discovery layout. The installation paths above were tested against the public repository.
+### Option 2 — ask an agent to install it
+
+If the agent can run shell commands or has a skill installer, send:
+
+```text
+Install the public Agent Skill from
+https://github.com/yizheng-hub/scientific-manuscript-writing-skill.
+The skill path is skills/scientific-manuscript-writing.
+Install it for this agent at user scope, review the files before enabling it,
+and tell me when a new session can use it.
+```
+
+In Codex, the equivalent explicit prompt is: `Use $skill-installer to install the skill at skills/scientific-manuscript-writing from this repository.` Installer names and explicit-invocation syntax can differ in other agents.
+
+This repository follows the standard `skills/<skill-name>/SKILL.md` discovery layout.
 
 ## Use it
 
-Start a new Codex turn and explicitly invoke the skill:
+Start a new agent session and ask it to use the `scientific-manuscript-writing` skill. In Codex, the explicit form is:
 
 ```text
 Use $scientific-manuscript-writing to revise this paper.
@@ -68,7 +81,7 @@ Preserve scientific accuracy, use simple English, remove defensive AI-style writ
 and return a journal-ready DOCX using the included manuscript template.
 ```
 
-Codex can also invoke it automatically when the request clearly concerns high-level manuscript revision, SI, scientific figures, captions, evidence consistency, or publication Word formatting. Explicitly writing `$scientific-manuscript-writing` is the most reliable entry point.
+Agents that support automatic skill discovery may load it when a request clearly concerns high-level manuscript revision, SI, scientific figures, captions, evidence consistency, or publication Word formatting. Explicitly naming the skill is the most reliable cross-agent entry point.
 
 ## What to provide
 
@@ -83,18 +96,19 @@ For the best result, provide the target journal and article type; current manusc
 
 ## 中文快速使用
 
-可以直接把本仓库地址发给 Codex，并附上下面这句话：
+这是一个通用 Agent Skill，不限于 Codex。可以将仓库地址发给 Codex、Claude Code、Kimi CLI 或其他支持 Agent Skills 的智能体，并附上：
 
 ```text
-请使用 $skill-installer 安装这个公开仓库中的 Skill：
+请安装这个公开仓库中的 Agent Skill：
 https://github.com/yizheng-hub/scientific-manuscript-writing-skill
 Skill 路径是 skills/scientific-manuscript-writing。
+请按当前智能体的用户级 Skill 目录安装，并在启用前检查文件。
 ```
 
-安装完成后，在下一轮对话中写：
+安装完成后，新建一轮对话并写：
 
 ```text
-请使用 $scientific-manuscript-writing，按照目标期刊要求完善这篇论文的正文、SI、图片、caption、参考文献和 Word 排版。
+请使用 scientific-manuscript-writing Skill，按照目标期刊要求完善这篇论文的正文、SI、图片、caption、参考文献和 Word 排版。
 ```
 
 ## Privacy and reference images
