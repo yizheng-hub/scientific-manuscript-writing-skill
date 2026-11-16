@@ -24,6 +24,8 @@ Prefer displays that reveal the structure the reader must evaluate:
 
 Do not default an entire figure set to simple line, point-line, lollipop, heatmap, bar, or column plots because they are easy to code. Use them when they are the clearest representation, not as the repeated grammar of the paper. A heatmap is appropriate for a genuinely dense matrix whose two-dimensional pattern matters; it is not the default container for a small table of values. A dot-line plot is appropriate for ordered, paired, or interval information; it is not a generic replacement for every result. Visual sophistication comes from an appropriate evidence structure, layered but interpretable encodings, and disciplined hierarchy—not ornament.
 
+For a central result, reject an isolated default line, point, bar, or column chart when the available evidence can also show uncertainty, distribution, composition, spatial heterogeneity, scenario structure, mechanism, or validation. The elementary mark may remain simple; the finished figure should coordinate the complementary layers needed to support the claim. A single simple chart is acceptable only when it is genuinely sufficient for one decisive comparison and adding another layer would not change interpretation.
+
 When local reference figures are available, use them as a visual grammar rather than as content to copy: emulate their dense but readable multi-panel composition, restrained palette, layered encodings, map or distribution emphasis where scientifically appropriate, and compact use of horizontal space. Preserve the new study's actual data relationships and never force an unsuitable chart merely to resemble a reference.
 
 ## Composition grammar from high-level published figures
@@ -40,6 +42,30 @@ Translate reference quality into structure, not decoration.
 
 Before coding, sketch at least two substantially different layouts and reject the weaker one against the scientific reading path. Do not accept a figure merely because each panel is individually correct.
 
+## Dense composition and edge utilization
+
+High information density means that most of the canvas carries readable evidence, not that every space is filled with marks.
+
+- Build figures in evidence bands: for example, aligned small multiples across the top; a dense comparison matrix below; and one or two map, mechanism, or local-detail panels at the side. Each band must advance the same claim at a different scale.
+- Use shared axes, shared legends, shared color bars, aligned category orders, and repeated geographic extents to reduce duplicated furniture. A shared legend belongs beside the panels it governs, not in a remote empty corner.
+- Use nested insets only for a real change of scale, a threshold, or a locally crowded pattern. Give the inset a clear source region, connector, or visual reason; a miniature duplicate with no added inference fails.
+- Design the final physical composition with `GridSpec`, `subplot_mosaic`, inset axes, or deliberate axes positions. Automatic `tight_layout` alone is not a design method.
+- Treat edge use as a preflight. After labels and legends are included, unnecessary outer margins should normally be only a few percent of the canvas, panel gaps should be visually consistent, and no large quadrant should remain blank because plots were undersized. These are diagnostic targets, not permission to clip labels.
+- Export with a tight bounding box only after checking that panel headers, map insets, color bars, scale bars, north arrows, and legend glyphs remain complete. A cropped character or symbol is a failure even when whitespace is reduced.
+- Preserve a clear hierarchy at thumbnail size and readable labels at final size. If density is achieved only by shrinking text, the layout has failed.
+
+## Conditional advanced encodings
+
+Use complex forms when their geometry matches the question.
+
+- Small multiples are preferred when readers must compare the same relation across regions, scenarios, materials, times, or outcomes. Keep axes, scales, annotation rules, and category order consistent; consolidate legends.
+- A matrix may be paired with marginal bubbles, distributions, maps, or ranked summaries when both the dense two-dimensional pattern and its totals matter.
+- Radial bars may summarize many categories when the task is to compare overall profiles or spatial/category cycles. They are poor for precise rank comparisons; provide reference rings, readable labels, a fixed category order, and a conventional supporting panel when exact differences matter.
+- Radar or polar profiles are acceptable for normalized multivariate shape comparisons with common directionality and scale. Do not use them for raw variables with incompatible units or as the only evidence for a quantitative claim.
+- Stacked bars or decomposition bands are appropriate when parts sum to a meaningful whole. Label only decision-relevant shares and provide a direct total or baseline so composition is not mistaken for magnitude.
+- Network maps must encode node and edge quantities with interpretable size, color, width, direction, or uncertainty. Pair them with a non-map summary when the reader must compare totals or time trends precisely.
+- Map insets, north arrows, scale bars, administrative boundaries, and locator boxes are functional only when they help interpret extent, scale, or local detail. Do not add cartographic decoration without a reading task.
+
 ## Portfolio diversity gate
 
 Review all main and supplementary figures together before accepting any one figure.
@@ -48,9 +74,11 @@ Review all main and supplementary figures together before accepting any one figu
 - Adjacent main figures should not repeat the same panel grammar, layout, and palette with only different variables.
 - A heatmap-dominant figure should normally be followed by a different evidence form, such as a map, distribution, effect-size display, joint relationship, decomposition, trajectory, or flow.
 - Combine complementary evidence within a figure: for example, a dominant map with distribution and uncertainty panels, or a joint-density panel with effect estimates and a decomposition.
+- Judge complexity at the level of the evidence composition, not the individual mark. Lines, points, bars, cells, contours, and polygons become publication-level when their coordinated roles reveal trajectory, distribution, scale, mechanism, or uncertainty without redundancy.
 - Reject a portfolio made mainly of diagnostic matrices, sparse scatters, simple bars, or point-line panels when the data support richer distributional, spatial, relational, or multiscale views.
 - Use visual complexity only when every encoding answers a scientific question. “Advanced” never means decorative complexity or more colors.
 - Reject a main-figure portfolio when more than half of its figures use the same dominant chart family or identical panel grid without a direct-comparison rationale. This is a diagnostic threshold, not a quota: fewer repetitions may still fail when they make the story visually monotonous.
+- Do not make every figure equally dense. Use the richest multi-panel compositions for central evidence and simpler figures for single decisive comparisons, while maintaining the same typography, palette semantics, and finish.
 
 ## Geographic evidence
 
@@ -72,6 +100,7 @@ When valid coordinates, boundaries, networks, regions, or spatial exposure varia
 - Maps should be large enough to carry the spatial argument. A dominant map may occupy at least twice the area of one supporting panel. Use shared extent, normalization, and legend semantics for comparable maps. Inset maps need source boxes and connectors.
 - Keep axis lines, units, tick conventions, and comparable panel sizes consistent. Align same-row x labels and same-column y labels.
 - Reduce empty outer margins and panel gaps after preserving internal room for data and text. Tight layout means compact panel-to-panel spacing, not cramped content. Reject large unused regions caused by undersized panels, remote legends, or poorly chosen aspect ratios.
+- Derive related colors from a small set of semantic base hues: one hue family per metric, material, mechanism, or direction; use lightness, saturation, alpha, texture, or outline for scenarios and uncertainty. Do not assign a new unrelated color to every series.
 
 ## Zero-overlap gate
 

@@ -27,13 +27,42 @@ Transferable features:
 - visual density comes from meaningful layers, not tiny text or ornamental marks;
 - color, shape, position, and uncertainty are coordinated and remain readable in grayscale.
 
+## Dense spatiotemporal evidence
+
+Open `../assets/visual-exemplars/dense-spatiotemporal-evidence.svg` when one result needs coordinated scenario trends, a dense region-by-scenario comparison, and spatial interpretation.
+
+Transferable features:
+
+- aligned temporal small multiples use common axes and one shared legend;
+- insets show a genuine local scale change rather than repeating the parent panel;
+- a structured matrix carries the dense two-dimensional pattern while marginal annotations remain selective;
+- two analytical maps use the same fictional extent but different, explicitly labeled encodings;
+- panel bands fill the canvas edge-to-edge without clipping or collisions;
+- the figure moves from trajectories to cross-sectional structure to geographic consequence.
+
+## Comparative network and matrix evidence
+
+Open `../assets/visual-exemplars/comparative-network-evidence.svg` when comparable spatial networks must be connected to temporal or matrix summaries.
+
+Transferable features:
+
+- four maps share extent, node/edge semantics, background normalization, north arrow, and scale treatment;
+- the lower band combines a marginal bubble trend with compact bivariate matrices instead of repeating more maps;
+- size, color, and line width have separate keys and consistent physical meaning;
+- the layout uses repeated panels only because direct comparison is the scientific task;
+- labels and legends occupy reserved regions rather than covering network evidence.
+
+These dense exemplars are not minimum panel counts. Use them only when the current evidence contains the corresponding multiscale relationships.
+
 ## Required comparison before accepting a figure
 
-Ask four questions:
+Ask six questions:
 
 1. What is the visual anchor, and can a reader identify the main finding within five seconds?
 2. Do supporting panels explain a different scientific relation, or are they cosmetic variants of the same chart?
 3. If spatial data exist, does the map carry real evidence at a useful scale rather than acting as a pale locator icon?
 4. Does the exported figure match the exemplars' hierarchy, density, typography, and compactness while remaining faithful to the current data?
+5. Are shared axes, legends, color bars, category orders, and map extents consolidated consistently?
+6. Does the evidence occupy the canvas efficiently without relying on tiny text, clipping, or decorative detail?
 
 Fail the figure when the answers expose repeated default charts, an equal grid with no hierarchy, excessive unused canvas, a tiny map, undefined visual encodings, bare panel letters, non-Times New Roman text, or any overlap.

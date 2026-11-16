@@ -34,7 +34,7 @@ View each exported main or supplementary figure at final publication size with o
 
 ### Visual portfolio reviewer
 
-View all main and supplementary figures as one set. Reject repeated heatmap, sparse point-line, bar, or layout grammar without a direct-comparison reason; missed opportunities for valid geographic evidence; undersized maps surrounded by blank canvas; bare panel letters instead of `(a) Title`; non-Times New Roman text; uncontrolled palette drift; and any overlap or clipping. Confirm that each figure has a distinct scientific role while the full set retains consistent semantic colors and typography.
+View all main and supplementary figures as one set. Reject repeated heatmap, sparse point-line, bar, or layout grammar without a direct-comparison reason; a central result reduced to an isolated default chart when complementary uncertainty, distributional, compositional, spatial, mechanistic, or validation evidence exists; missed opportunities for valid geographic evidence; undersized maps surrounded by blank canvas; bare panel letters instead of `(a) Title`; non-Times New Roman text; uncontrolled palette drift; and any overlap or clipping. Confirm that each figure has a distinct scientific role while the full set retains consistent semantic colors and typography. At final size, also reject large unused outer margins, inconsistent panel gaps, duplicate legends, and any figure that appears dense only because text was reduced.
 
 ### Publication-file auditor
 

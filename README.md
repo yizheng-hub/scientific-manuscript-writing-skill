@@ -93,8 +93,10 @@ For the best result, provide the target journal and article type; current manusc
 - `skills/scientific-manuscript-writing/SKILL.md`: routing and non-negotiable standards.
 - `skills/scientific-manuscript-writing/references/master-prompt.md`: comprehensive Chinese reusable prompt.
 - `skills/scientific-manuscript-writing/references/`: writing, evidence, SI, caption, figure, Word, and validation contracts.
+- `skills/scientific-manuscript-writing/references/plot-notebook.md`: self-contained notebook and layout-engineering contract for reproducible figures.
 - `skills/scientific-manuscript-writing/assets/Manuscript Template.docx`: de-identified master Word template.
 - `skills/scientific-manuscript-writing/assets/visual-exemplars/`: original synthetic figure exemplars showing map-led hierarchy and mixed evidence grammar without copying any study.
+- `skills/scientific-manuscript-writing/scripts/build_visual_exemplars.py`: reproducible generator for the original synthetic figure exemplars.
 - `skills/scientific-manuscript-writing/scripts/validate_docx.py`: structural preflight for fonts, three-line tables, native equation layout, first-citation supplementary numbering, and black-square paragraph properties.
 
 ## 中文快速使用
