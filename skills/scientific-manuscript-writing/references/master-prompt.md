@@ -184,7 +184,7 @@ SI 是可独立阅读的第二条科学叙事。顶层 section 按正文首次�
 
 使用随 Skill 提供的 `Manuscript Template.docx`，或使用用户/期刊提供的模板。目标期刊的明确规定优先。
 
-默认 house style：A4；Times New Roman；正文和公式 12 pt；一级 section 14 pt 加粗；二级标题 12 pt 加粗；图注、表格和参考文献 11 pt；正文 1.5 倍行距、首行缩进约 0.33 in；review copy 使用连续行号和居中页码。正文、SI 中的 Figure/Table/Section/panel 交叉引用采用模板中的加粗样式。
+默认 house style：A4；Times New Roman；正文和公式 12 pt；一级 section 14 pt 加粗；二级标题 12 pt 加粗；图注、表格和参考文献 11 pt；正文 1.5 倍行距、首行缩进 2 字符（12 pt 正文下等于 24 pt，跨软件实现约 0.33 in）；review copy 使用连续行号和居中页码。正文、SI 中的 Figure/Table/Section/panel 交叉引用采用模板中的加粗样式。
 
 正文段落使用 6 pt 段前、6 pt 段后和 1.5 倍行距；图片所在段落居中，段前 12 pt、段后 0 pt；figure caption 段前 0 pt、段后 12 pt。不得把 Word 以“行”为单位保存的内部数值误写成带小数的 pt，也不得用空白段落模拟这些距离。标题、正文、图片、caption、表格、表注和参考文献必须继承 Word template 的真实样式；若用户提供的目标期刊模板有明确冲突，则以其样式为准并记录覆盖项。
 

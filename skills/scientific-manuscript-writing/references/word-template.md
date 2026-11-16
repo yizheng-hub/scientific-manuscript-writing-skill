@@ -16,7 +16,7 @@ When authoring a deliverable, copy the template and retain only the relevant par
 
 - A4 portrait; 1.25 in left/right and 1.0 in top/bottom margins unless the journal template specifies otherwise.
 - Times New Roman throughout.
-- Main text and equations: 12 pt; justified; 1.5 line spacing; 0.33 in first-line indent; 6 pt before/after in the current house style.
+- Main text and equations: 12 pt; justified; 1.5 line spacing; first-line indent of two characters (24 pt, implemented as approximately 0.33 in for 12 pt text); 6 pt before/after in the current house style.
 - Main section headings: 14 pt bold; subsection headings: 12 pt bold.
 - Figure captions, table text/notes, and references: 11 pt.
 - Place each figure in a centered figure paragraph with 12 pt space before and 0 pt after. Preserve its aspect ratio and final publication width.

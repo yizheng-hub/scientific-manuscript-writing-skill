@@ -83,6 +83,12 @@ def validate(path: Path) -> list[str]:
     check_style("caption", "22", "0", "240")
     check_style("figure placeholder", "22", "240", "0")
     check_style("reference", "22", "0", "0")
+    normal_style = styles_by_name.get("normal")
+    normal_indent = None if normal_style is None else normal_style.find("./w:pPr/w:ind", NS)
+    if normal_style is not None and attr(normal_indent, "firstLine") not in {"475", "480"}:
+        errors.append(
+            f"style Normal: expected two-character first-line indent (475–480 twips), found {attr(normal_indent, 'firstLine')}"
+        )
 
     all_text = "\n".join(paragraph_text(p) for p in document.findall(".//w:p", NS))
     validate_sequence(all_text, "Supplementary Figure", r"Supplementary\s+(?:Figure|Fig\.)\s*S(\d+)", errors)
