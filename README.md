@@ -16,6 +16,7 @@ The skill emphasizes:
 - independently readable SI sections with figures and tables interspersed in the narrative;
 - self-contained captions, independent abbreviation definitions, and verified citation support;
 - reproducible `plot.ipynb` figure generation and a strict zero-overlap visual gate;
+- three-line Word tables, native editable equations, first-citation supplementary numbering, and a no-black-square DOCX preflight;
 - role-based cold reads by an editor, broad reviewer, technical reviewer, general reader, novice reader, and high-school/news reader;
 - a generic `Manuscript Template.docx` retaining the house Word styles for main text, SI, and a cover letter.
 
@@ -93,6 +94,8 @@ For the best result, provide the target journal and article type; current manusc
 - `skills/scientific-manuscript-writing/references/master-prompt.md`: comprehensive Chinese reusable prompt.
 - `skills/scientific-manuscript-writing/references/`: writing, evidence, SI, caption, figure, Word, and validation contracts.
 - `skills/scientific-manuscript-writing/assets/Manuscript Template.docx`: de-identified master Word template.
+- `skills/scientific-manuscript-writing/assets/visual-exemplars/`: original synthetic figure exemplars showing map-led hierarchy and mixed evidence grammar without copying any study.
+- `skills/scientific-manuscript-writing/scripts/validate_docx.py`: structural preflight for fonts, three-line tables, native equation layout, first-citation supplementary numbering, and black-square paragraph properties.
 
 ## 中文快速使用
 
@@ -115,7 +118,7 @@ Skill 路径是 skills/scientific-manuscript-writing。
 
 This public package contains only generic, de-identified instructions and placeholders. It contains no manuscript-specific title, authors, study topic, data, results, figures, review comments, file paths, or submission details.
 
-Published reference images are not redistributed here because their licenses may not permit republication. Users may supply reference figures they are entitled to use; the skill will extract visual principles without copying scientific content.
+Published reference images are not redistributed here because their licenses may not permit republication. The repository instead includes original synthetic exemplars that demonstrate transferable composition, hierarchy, typography, palette, and evidence encoding without reusing published data or artwork. Users may also supply reference figures they are entitled to use; the skill will extract visual principles without copying scientific content.
 
 ## License
 

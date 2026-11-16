@@ -45,7 +45,8 @@ Treat the main manuscript, SI, each figure caption, and each stand-alone table n
 
 - Cite every panel in the order needed by the argument, normally left-to-right and top-to-bottom unless the figure has a deliberate alternative flow.
 - Use the exact numbering and bold cross-reference style defined by the Word template.
-- Number figures and tables by first appearance, then update all main-text, SI, caption, and note references together.
+- Number figures and tables strictly by first appearance, then update all main-text, SI, caption, and note references together. Apply the same rule independently to Supplementary Figure S1, S2, ...; Supplementary Table S1, S2, ...; and numbered SI sections when used.
+- Run a first-citation sequence audit on the final assembled files. The first new supplementary item cited must be S1, the next previously unseen item S2, and so on, with no gaps or reversals. If the prose first cites an item currently called S2, either move the S1 citation earlier when scientifically logical or rename that item S1 and update every cross-reference, caption, file name, and callout. Never accept S2-before-S1 merely because the assets were created in that order.
 - Keep panel markers as `(a) Title` with one space between marker and title, both in the image and caption.
 - Verify that a reader can find every referenced SI section without encountering an undefined prerequisite.
 

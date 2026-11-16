@@ -2,9 +2,9 @@
 
 ## Figure-led narrative
 
-Plan the paper as a sequence of visual evidence. Assign each figure one scientific question and each panel one non-duplicative role, such as context, central result, distribution, mechanism, validation, comparison, uncertainty, or boundary. Results panels must display real data, model output, or a verifiable analysis. Use a conceptual framework or flow diagram only in Methods or a study-design overview when it materially helps the reader.
+Plan the paper as a sequence of visual evidence. Before plotting, create a portfolio storyboard with one row per figure: scientific question, take-home finding, data relation, candidate chart families, geographic opportunity, chosen panel roles, and why the chosen visual form is superior to simpler alternatives. Assign each figure one scientific question and each panel one non-duplicative role, such as context, central result, distribution, mechanism, validation, comparison, uncertainty, or boundary. Results panels must display real data, model output, or a verifiable analysis. Use a conceptual framework or flow diagram only in Methods or a study-design overview when it materially helps the reader.
 
-Aim for substantial multi-panel figures when the evidence supports them, often four or more panels in this house style. Never add a panel merely to reach a count.
+Panel count is evidence-driven. Build substantial multi-panel figures when complementary views are needed, but never add a panel merely to reach a count or split one weak chart into several cosmetic variants.
 
 ## Choose the graphic from the scientific relation
 
@@ -15,28 +15,67 @@ Prefer displays that reveal the structure the reader must evaluate:
 - paired slopes or connected points for within-unit changes;
 - frontiers, contours, or joint distributions for trade-offs;
 - maps with physically meaningful encodings for spatial coverage or patterns;
+- small-multiple or bivariate maps for comparable geographic scenarios, provided they share extent, normalization, and legend semantics;
 - trajectories and event windows for temporal dynamics;
 - ranked or decomposed displays for contributions;
+- flow, transition, or alluvial displays when movement between states is the scientific result;
+- ridgeline, half-violin, beeswarm, hexbin, contour, or density displays when they reveal distributional or joint structure that summary marks hide;
 - local enlargement only when it resolves genuine crowding or detail.
 
-Do not default an entire figure set to simple line, heatmap, bar, or column plots because they are easy to code. Use them when they are the clearest representation. Visual sophistication comes from an appropriate evidence structure and disciplined hierarchy, not ornament.
+Do not default an entire figure set to simple line, point-line, lollipop, heatmap, bar, or column plots because they are easy to code. Use them when they are the clearest representation, not as the repeated grammar of the paper. A heatmap is appropriate for a genuinely dense matrix whose two-dimensional pattern matters; it is not the default container for a small table of values. A dot-line plot is appropriate for ordered, paired, or interval information; it is not a generic replacement for every result. Visual sophistication comes from an appropriate evidence structure, layered but interpretable encodings, and disciplined hierarchy—not ornament.
 
 When local reference figures are available, use them as a visual grammar rather than as content to copy: emulate their dense but readable multi-panel composition, restrained palette, layered encodings, map or distribution emphasis where scientifically appropriate, and compact use of horizontal space. Preserve the new study's actual data relationships and never force an unsuitable chart merely to resemble a reference.
 
+## Composition grammar from high-level published figures
+
+Translate reference quality into structure, not decoration.
+
+- Establish one visual anchor: a dominant map, response surface, trajectory, distribution, or mechanism panel should carry the main claim. Supporting panels explain scale, uncertainty, mechanism, comparison, or local detail.
+- Build a cross-scale reading path: overview to regional detail, global pattern to mechanism, temporal trend to spatial consequence, or distribution to effect estimate. Use insets, connectors, aligned axes, and shared legends only when they make that path explicit.
+- Mix complementary chart families inside a figure instead of cloning one panel type. Heterogeneous panels should answer one question, share typography and color semantics, and remain visually comparable.
+- Encode data through position first, then restrained color, size, shape, line, texture, or transparency. Every encoding must be defined and interpretable; decorative layers fail.
+- Use asymmetric layouts when evidence importance is asymmetric. Equal-sized 2-by-2 panels are not a default. A principal panel may occupy half or more of the figure while compact diagnostic panels use the remaining space.
+- Maintain high information density without crowding: reserve whitespace for reading and legends, not as a consequence of undersized plots. Integrate legends, scale bars, color bars, and regional summaries into genuine negative space.
+- Make maps analytical rather than illustrative. Boundaries provide context; fills, symbols, flows, contours, uncertainty, or linked regional summaries carry the result.
+
+Before coding, sketch at least two substantially different layouts and reject the weaker one against the scientific reading path. Do not accept a figure merely because each panel is individually correct.
+
+## Portfolio diversity gate
+
+Review all main and supplementary figures together before accepting any one figure.
+
+- Do not let one chart family dominate the manuscript unless the repeated form is required for direct comparison.
+- Adjacent main figures should not repeat the same panel grammar, layout, and palette with only different variables.
+- A heatmap-dominant figure should normally be followed by a different evidence form, such as a map, distribution, effect-size display, joint relationship, decomposition, trajectory, or flow.
+- Combine complementary evidence within a figure: for example, a dominant map with distribution and uncertainty panels, or a joint-density panel with effect estimates and a decomposition.
+- Reject a portfolio made mainly of diagnostic matrices, sparse scatters, simple bars, or point-line panels when the data support richer distributional, spatial, relational, or multiscale views.
+- Use visual complexity only when every encoding answers a scientific question. “Advanced” never means decorative complexity or more colors.
+- Reject a main-figure portfolio when more than half of its figures use the same dominant chart family or identical panel grid without a direct-comparison rationale. This is a diagnostic threshold, not a quota: fewer repetitions may still fail when they make the story visually monotonous.
+
+## Geographic evidence
+
+When valid coordinates, boundaries, networks, regions, or spatial exposure variables exist, actively test whether geographic displays clarify heterogeneity, transferability, coverage, clustering, scale, or decision relevance. Prefer using multiple spatial views across the paper when different geographic questions are genuinely present. Do not add a map merely because a place name exists.
+
+- A map that carries a principal result should be visually dominant, not a tiny silhouette surrounded by unused canvas.
+- Show meaningful geographic context with restrained boundaries, appropriate projection, consistent extent, and data-driven fill, symbol, flow, contour, or uncertainty layers.
+- Use insets, source boxes, connectors, small multiples, or linked statistical panels when they explain scale or local detail.
+- Avoid pale basemaps with only a few highlighted polygons when the same information would be clearer as a focused extent or a data-rich spatial layer.
+- Comparable maps must share normalization and legend semantics. State when values are counts, rates, modeled surfaces, uncertainty, or residuals.
+
 ## House style
 
-- Times New Roman throughout. Default body labels: 11 pt; panel titles: 12 pt bold. If final-size constraints require 9/10 pt, change the entire figure set consistently rather than shrinking isolated figures.
-- Panel labels and titles use `(a) Title` with one space. Align titles within rows/columns when their roles are parallel.
-- Use black regular text and low-saturation, color-blind-aware palettes. Keep the same object, condition, or direction in the same color across the manuscript and SI.
+- Times New Roman throughout every visible text element, including panel labels, titles, axes, ticks, annotations, legends, color bars, map labels, and inset labels. Default body labels: 11 pt; panel titles: 12 pt bold. If final-size constraints require 9/10 pt, change the entire figure set consistently rather than shrinking isolated figures.
+- Panel labels and titles must appear as one header in the exact form `(a) Title`, with lowercase sequential letters, parentheses, and one space. A bare `a`, a separated panel letter, or a title without its marker fails preflight. Align headers within rows/columns when their roles are parallel.
+- Use black regular text and coordinated low-saturation, color-blind-aware palettes. A useful starting family is muted blue `#5B8DB8`, teal-green `#4F9C91`, purple `#8C7AA9`, muted red `#D77A72`, ochre `#D5A94E`, and neutral gray `#A9B0B5`. Select only colors with defined semantics; do not use the full palette merely for variety. Pair red/green distinctions with shape, line, or texture cues.
 - Legends have no border or background. Place them in genuine empty space or reserve a legend region; never cover data, labels, error bars, axes, or another panel.
 - A bubble-size legend must use the same area scaling as the plotted bubbles. Separate size and color legends when they encode different quantities.
 - Maps should be large enough to carry the spatial argument. A dominant map may occupy at least twice the area of one supporting panel. Use shared extent, normalization, and legend semantics for comparable maps. Inset maps need source boxes and connectors.
 - Keep axis lines, units, tick conventions, and comparable panel sizes consistent. Align same-row x labels and same-column y labels.
-- Reduce empty outer margins and panel gaps only after preserving internal room for data and text. Tight layout means compact panel-to-panel spacing, not cramped content.
+- Reduce empty outer margins and panel gaps after preserving internal room for data and text. Tight layout means compact panel-to-panel spacing, not cramped content. Reject large unused regions caused by undersized panels, remote legends, or poorly chosen aspect ratios.
 
 ## Zero-overlap gate
 
-At final publication size, inspect every panel for legend/data, legend/text, label/error-bar, title/panel, and adjacent-panel overlap; clipped labels, symbols, color bars, or annotations; inconsistent axes; excessive blank space; unreadable fonts after Word placement; distorted aspect ratio; inconsistent color meaning or duplicate legends; and internal audit terms, code names, failure labels, or process status.
+At final publication size, inspect every panel for legend/data, legend/text, label/error-bar, title/panel, and adjacent-panel overlap; clipped labels, symbols, color bars, or annotations; inconsistent axes; excessive blank space; unreadable fonts after Word placement; distorted aspect ratio; inconsistent color meaning or duplicate legends; missing parentheses in panel headers; non-Times New Roman text; and internal audit terms, code names, failure labels, or process status.
 
 Fix layout, text length, axis range, legend placement, or panel allocation before reducing font size. Treat any text–text, text–graphic, graphic–graphic, legend–data, or cross-panel collision as a failed figure, even if the overlapping elements remain partly readable.
 
@@ -48,4 +87,5 @@ Inspect the exported asset at its final physical size. Verify raster DPI or vect
 - Explain the relationship among panels, not only what each panel contains.
 - Confirm that the caption independently defines the visual encoding and abbreviations.
 - Confirm that the plotted numbers match the verified result tables and that the plotting notebook recreates the delivered asset.
+- Run a portfolio-level review after individual figures pass: confirm chart-family diversity, map opportunities, palette consistency, panel-header syntax, balanced information density, and the absence of repeated visual grammar without scientific justification.
 

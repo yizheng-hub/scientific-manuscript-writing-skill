@@ -12,8 +12,8 @@ Turn the supplied evidence into a clear scientific claim, a figure-led evidence 
 - For a full manuscript or a substantial revision, read [references/master-prompt.md](references/master-prompt.md) and [references/writing-and-contribution.md](references/writing-and-contribution.md).
 - For experimental design, analysis planning, result verification, or reproducibility, also read [references/evidence-and-workflow.md](references/evidence-and-workflow.md).
 - For SI, captions, tables, cross-references, or abbreviations, read [references/si-and-captions.md](references/si-and-captions.md).
-- For figure planning, plotting, figure review, or visual restyling, read [references/figure-design.md](references/figure-design.md). When the user supplies licensed reference figures, inspect them as visual grammar while preserving the new study's evidence structure.
-- For a DOCX deliverable, read [references/word-template.md](references/word-template.md), use [assets/Manuscript Template.docx](assets/Manuscript%20Template.docx), and follow the Documents skill's render-and-inspect gate.
+- For figure planning, plotting, figure review, or visual restyling, read [references/figure-design.md](references/figure-design.md) and [references/visual-exemplars.md](references/visual-exemplars.md). Inspect the bundled synthetic exemplars and any user-supplied licensed references as visual grammar while preserving the new study's evidence structure.
+- For a DOCX deliverable, read [references/word-template.md](references/word-template.md), use [assets/Manuscript Template.docx](assets/Manuscript%20Template.docx), run `scripts/validate_docx.py` on the finished files, and follow the Documents skill's render-and-inspect gate.
 - For final validation, read [references/self-validation.md](references/self-validation.md) and run the relevant reader roles.
 
 ## Core workflow

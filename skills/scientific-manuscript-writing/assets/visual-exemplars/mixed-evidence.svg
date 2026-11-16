@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <style>text{font-family:'Times New Roman',serif;fill:#171717}.h{font-size:25px;font-weight:700}.lab{font-size:18px}.small{font-size:15px}.axis{stroke:#343434;stroke-width:1.5}.grid{stroke:#d9dcdf;stroke-width:1;stroke-dasharray:3 5}.blue{fill:#5b8db8}.green{fill:#4f9c91}.purple{fill:#8c7aa9}.red{fill:#d77a72}.ochre{fill:#d5a94e}.gray{fill:#a9b0b5}</style>
+    <linearGradient id="joint" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#5b8db8"/><stop offset=".45" stop-color="#f1eee8"/><stop offset="1" stop-color="#d77a72"/></linearGradient>
+  </defs>
+  <rect width="1400" height="860" fill="#fff"/>
+
+  <g transform="translate(68 35)">
+    <text class="h" x="0" y="0" dominant-baseline="hanging">(a) Joint response surface</text>
+    <g transform="translate(55 55)">
+      <rect x="0" y="0" width="675" height="390" rx="4" fill="url(#joint)" opacity=".78"/>
+      <g fill="none" stroke="#fff" stroke-width="2.3" opacity=".92"><path d="M8 331C116 290 159 246 219 168C283 86 403 62 654 28"/><path d="M9 369C151 326 236 272 295 199C369 107 475 86 665 70"/><path d="M61 389C207 354 310 305 382 233C455 159 547 132 675 121"/><path d="M194 390C335 359 444 320 518 258C573 211 625 192 675 184"/></g>
+      <g fill="#fff" opacity=".55"><circle cx="98" cy="307" r="3"/><circle cx="133" cy="267" r="4"/><circle cx="188" cy="251" r="3"/><circle cx="246" cy="184" r="4"/><circle cx="307" cy="207" r="3"/><circle cx="355" cy="143" r="4"/><circle cx="417" cy="112" r="3"/><circle cx="482" cy="128" r="4"/><circle cx="538" cy="76" r="3"/><circle cx="605" cy="63" r="4"/></g>
+      <path d="M42 342C170 296 238 231 315 155C397 75 513 49 638 40" fill="none" stroke="#343434" stroke-width="4"/>
+      <circle class="ochre" cx="315" cy="155" r="10" stroke="#fff" stroke-width="2"/>
+      <line class="axis" x1="0" y1="390" x2="675" y2="390"/><line class="axis" x1="0" y1="0" x2="0" y2="390"/>
+      <text class="lab" x="277" y="425">Exposure intensity</text><text class="lab" transform="translate(-34 255) rotate(-90)">System response</text>
+      <g transform="translate(515 330)"><rect x="0" y="0" width="28" height="13" fill="#5b8db8"/><text class="small" x="36" y="12">lower</text><rect x="0" y="24" width="28" height="13" fill="#d77a72"/><text class="small" x="36" y="36">higher</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(835 35)">
+    <text class="h" x="0" y="0" dominant-baseline="hanging">(b) Distributional shift</text>
+    <g transform="translate(45 55)">
+      <line class="axis" x1="0" y1="390" x2="455" y2="390"/><line class="axis" x1="0" y1="0" x2="0" y2="390"/>
+      <path d="M64 343C32 316 39 271 63 242C86 213 82 160 64 108C46 160 42 213 65 242C89 271 96 316 64 343Z" fill="#5b8db8" opacity=".42"/>
+      <path d="M171 348C137 315 148 270 173 237C199 202 194 132 171 77C148 132 143 202 169 237C194 270 205 315 171 348Z" fill="#4f9c91" opacity=".42"/>
+      <path d="M278 351C243 309 254 259 281 224C309 187 303 105 278 51C253 105 247 187 275 224C302 259 313 309 278 351Z" fill="#8c7aa9" opacity=".42"/>
+      <path d="M385 346C350 318 362 280 388 247C414 214 407 151 385 96C363 151 356 214 382 247C408 280 420 318 385 346Z" fill="#d77a72" opacity=".42"/>
+      <g opacity=".85"><circle class="blue" cx="56" cy="271" r="5"/><circle class="blue" cx="72" cy="226" r="5"/><circle class="blue" cx="60" cy="192" r="5"/><circle class="green" cx="164" cy="253" r="5"/><circle class="green" cx="178" cy="205" r="5"/><circle class="green" cx="168" cy="163" r="5"/><circle class="purple" cx="270" cy="218" r="5"/><circle class="purple" cx="287" cy="171" r="5"/><circle class="purple" cx="276" cy="132" r="5"/><circle class="red" cx="376" cy="264" r="5"/><circle class="red" cx="394" cy="219" r="5"/><circle class="red" cx="382" cy="176" r="5"/></g>
+      <g stroke="#343434" stroke-width="4"><line x1="64" y1="190" x2="64" y2="263"/><line x1="171" y1="162" x2="171" y2="244"/><line x1="278" y1="126" x2="278" y2="218"/><line x1="385" y1="177" x2="385" y2="258"/></g>
+      <g fill="#fff" stroke="#343434" stroke-width="2"><circle cx="64" cy="226" r="6"/><circle cx="171" cy="201" r="6"/><circle cx="278" cy="171" r="6"/><circle cx="385" cy="218" r="6"/></g>
+      <text class="lab" x="39" y="422">G1</text><text class="lab" x="146" y="422">G2</text><text class="lab" x="253" y="422">G3</text><text class="lab" x="360" y="422">G4</text>
+    </g>
+  </g>
+
+  <g transform="translate(42 555)">
+    <text class="h" x="0" y="0" dominant-baseline="hanging">(c) Mechanism-specific effects</text>
+    <g transform="translate(10 48)">
+      <line class="grid" x1="320" y1="0" x2="320" y2="220"/><line x1="455" y1="0" x2="455" y2="220" stroke="#343434" stroke-width="1.5" stroke-dasharray="7 5"/>
+      <g class="lab"><text x="0" y="34">Direct pathway</text><text x="0" y="84">Indirect pathway</text><text x="0" y="134">Adaptation</text><text x="0" y="184">Residual</text></g>
+      <g stroke-width="5"><line stroke="#5b8db8" x1="250" y1="28" x2="432" y2="28"/><line stroke="#4f9c91" x1="361" y1="78" x2="526" y2="78"/><line stroke="#8c7aa9" x1="403" y1="128" x2="590" y2="128"/><line stroke="#d77a72" x1="292" y1="178" x2="473" y2="178"/></g>
+      <circle class="blue" cx="341" cy="28" r="10" stroke="#fff" stroke-width="2"/><circle class="green" cx="444" cy="78" r="10" stroke="#fff" stroke-width="2"/><circle class="purple" cx="497" cy="128" r="10" stroke="#fff" stroke-width="2"/><circle class="red" cx="382" cy="178" r="10" stroke="#fff" stroke-width="2"/>
+      <text class="small" x="303" y="243">−0.2</text><text class="small" x="447" y="243">0</text><text class="small" x="577" y="243">0.2</text><text class="small" x="400" y="270">Adjusted effect</text>
+    </g>
+  </g>
+
+  <g transform="translate(755 555)">
+    <text class="h" x="0" y="0" dominant-baseline="hanging">(d) Contribution flow</text>
+    <g transform="translate(10 57)">
+      <g class="small"><text x="0" y="31">Sources</text><text x="226" y="31">Processes</text><text x="478" y="31">Outcome</text></g>
+      <rect x="0" y="58" width="72" height="42" rx="4" class="blue"/><rect x="0" y="125" width="72" height="58" rx="4" class="green"/><rect x="0" y="208" width="72" height="35" rx="4" class="ochre"/>
+      <rect x="236" y="76" width="88" height="68" rx="4" class="purple"/><rect x="236" y="172" width="88" height="54" rx="4" class="red"/>
+      <rect x="492" y="103" width="98" height="92" rx="4" fill="#48565f"/>
+      <g fill="none" opacity=".36"><path d="M72 65C146 65 157 91 236 91" stroke="#5b8db8" stroke-width="17"/><path d="M72 88C156 88 162 191 236 191" stroke="#5b8db8" stroke-width="10"/><path d="M72 142C157 142 162 112 236 112" stroke="#4f9c91" stroke-width="24"/><path d="M72 170C157 170 161 209 236 209" stroke="#4f9c91" stroke-width="17"/><path d="M72 225C151 225 164 130 236 130" stroke="#d5a94e" stroke-width="13"/><path d="M324 105C397 105 409 126 492 126" stroke="#8c7aa9" stroke-width="34"/><path d="M324 132C402 132 412 157 492 157" stroke="#8c7aa9" stroke-width="17"/><path d="M324 190C399 190 411 174 492 174" stroke="#d77a72" stroke-width="27"/><path d="M324 216C402 216 413 188 492 188" stroke="#d77a72" stroke-width="13"/></g>
+      <g fill="#fff" class="small"><text x="16" y="85">S1</text><text x="16" y="159">S2</text><text x="16" y="232">S3</text><text x="255" y="115">P1</text><text x="255" y="205">P2</text><text x="511" y="154">Result</text></g>
+    </g>
+  </g>
+</svg>

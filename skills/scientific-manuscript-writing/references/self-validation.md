@@ -32,6 +32,14 @@ Read the title, abstract, introduction opening and final paragraph, main figure 
 
 View each exported main or supplementary figure at final publication size with only its caption. Recover the figure question, factual takeaway, role of every panel, comparison and baseline, direction and decision-relevant magnitude, uncertainty, and the claim directly supported. Flag any answer that depends on surrounding prose, hidden disciplinary knowledge, color alone, or unreadable layout.
 
+### Visual portfolio reviewer
+
+View all main and supplementary figures as one set. Reject repeated heatmap, sparse point-line, bar, or layout grammar without a direct-comparison reason; missed opportunities for valid geographic evidence; undersized maps surrounded by blank canvas; bare panel letters instead of `(a) Title`; non-Times New Roman text; uncontrolled palette drift; and any overlap or clipping. Confirm that each figure has a distinct scientific role while the full set retains consistent semantic colors and typography.
+
+### Publication-file auditor
+
+Inspect the final DOCX structure and rendered pages, not only the source prose. Reject ordinary tables unless they use exactly three rules (1.5 pt top, 0.5 pt below the header, 1.5 pt bottom), no vertical or extra internal rules, and Times New Roman 11 pt. Treat borderless equation-layout tables as a separate exception. Reject supplementary numbering when first citations do not introduce S1, S2, S3, ... in order. Reject `keep with next`, `keep lines together`, or `page break before` formatting that produces black square markers in the Word left margin. Compare paragraph spacing, line spacing, indentation, headings, captions, figures, and table geometry against the retained Word template and inspect every rendered page.
+
 ## Common questions
 
 Ask every role, at its appropriate level:
