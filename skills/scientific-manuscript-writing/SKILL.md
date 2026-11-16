@@ -14,7 +14,7 @@ Turn the supplied evidence into a clear scientific claim, a figure-led evidence 
 - For SI, captions, tables, cross-references, or abbreviations, read [references/si-and-captions.md](references/si-and-captions.md).
 - For figure planning, plotting, figure review, or visual restyling, read [references/figure-design.md](references/figure-design.md) and [references/visual-exemplars.md](references/visual-exemplars.md). For plotting code or notebooks, also read [references/plot-notebook.md](references/plot-notebook.md). Inspect the bundled synthetic exemplars and any user-supplied licensed references as visual grammar while preserving the new study's evidence structure.
 - For a DOCX deliverable, read [references/word-template.md](references/word-template.md), use [assets/Manuscript Template.docx](assets/Manuscript%20Template.docx), run `scripts/validate_docx.py` on the finished files, and follow the Documents skill's render-and-inspect gate.
-- For final validation, read [references/self-validation.md](references/self-validation.md) and run the relevant reader roles.
+- For final validation, read [references/self-validation.md](references/self-validation.md). A full manuscript, SI, or journal-ready package must run every role listed there as independent agents or isolated contexts unless the user explicitly forbids orchestration; a narrower task runs the roles affected by that task.
 
 ## Core workflow
 
@@ -23,12 +23,12 @@ Turn the supplied evidence into a clear scientific claim, a figure-led evidence 
 3. Freeze the verified evidence base. Do not use a preferred direction, ranking, or significance result as the condition for accepting an analysis.
 4. Organize Results around scientific findings and figures. Cite and interpret every panel in order. Use conceptual or framework panels only when a Methods overview genuinely needs them; Results panels must carry data or analysis.
 5. Build Title, Abstract, Introduction, Discussion, SI, captions, and any cover letter around the same contribution. Keep claims, numbers, terminology, units, colors, and numbering synchronized.
-6. Run role-based cold reads for innovation, scientific meaning, broad-reader clarity, defensive writing, evidence alignment, caption self-containment, visual defects, reference support, and Word layout. Fix supported issues and repeat until the relevant roles can recover the intended story accurately.
+6. For a full manuscript or journal-ready package, run the required cold-read roles as separate agents or isolated contexts when orchestration is available; do not blend them into one simulated multi-role review. Integrate only after independent reports are frozen, fix supported issues, and repeat affected technical, field-expert, reader, visual, and publication-file checks until they pass.
 
 ## Non-negotiable standards
 
 - Do not fabricate data, methods, results, references, or certainty. Mark unresolved facts for verification.
-- Remove development logs, failed attempts, stopping records, internal audit labels, AI-review language, and hypothetical reviewer rebuttals from formal deliverables.
+- Write a discovery-led paper, not an academic project report. Remove code variable and column names, script/notebook/cell identifiers, debugging chronology, discarded-trial narration, internal audit labels, AI-review language, and hypothetical reviewer rebuttals from narrative prose and figure labels. Preserve final stopping/selection rules, negative controls, convergence or replication failures, robustness evidence, exclusions, and protocol deviations when they affect validity. Where exact identifiers are needed in an SI data dictionary or reproducibility mapping, pair each one with a human-readable scientific term.
 - Do not scatter defensive sentences after findings or repeatedly state what the study does not prove. Keep real study-level limitations brief and integrated at the end of Discussion. Preserve conditions or uncertainty that materially change a claim.
 - Treat non-positive or null results as evidence when they change the scientific interpretation. State the resulting insight; do not hide it or narrate it as a failed experiment.
 - Use simple, idiomatic English. Lead with the innovation and finding, retain only decision-relevant numbers, and explain the contribution before technical detail overwhelms it.

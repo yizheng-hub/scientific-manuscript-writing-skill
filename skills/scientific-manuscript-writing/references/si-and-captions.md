@@ -44,9 +44,27 @@ Treat the main manuscript, SI, each figure caption, and each stand-alone table n
 ## Cross-references and order
 
 - Cite every panel in the order needed by the argument, normally left-to-right and top-to-bottom unless the figure has a deliberate alternative flow.
-- Use the exact numbering and bold cross-reference style defined by the Word template.
-- Number figures and tables strictly by first appearance, then update all main-text, SI, caption, and note references together. Apply the same rule independently to Supplementary Figure S1, S2, ...; Supplementary Table S1, S2, ...; and numbered SI sections when used.
+- Use the exact numbering, grammar, and run-level bold cross-reference style defined by the Word template. Bold the reference token, not surrounding parentheses, commas, semicolons, or conjunctions.
+- Use `Fig. S1` and `Table S1` in captions, prose, main-text callouts, and bookmarks. In the house style, number every top-level SI heading as `S1. [Topic]`, `S2. [Topic]`, ... and refer to it in prose as `Section S1`, `Section S2`, .... Do not write `Supplementary Fig. 1`, `Supplementary Figure 1`, `Supplementary Table 1`, `Supplementary Section 1`, or omit the `S` prefix. Caption punctuation follows the retained template or target journal, for example `Fig. S1 | [Title]` in the house template; safe asset filenames may use `Fig_S1.png`.
+- Number figures and tables strictly by first appearance, then update all main-text, SI, caption, and note references together. Audit the three sequences independently: Fig. S1, S2, ...; Table S1, S2, ...; and Section S1, S2, ....
 - Run a first-citation sequence audit on the final assembled files. The first new supplementary item cited must be S1, the next previously unseen item S2, and so on, with no gaps or reversals. If the prose first cites an item currently called S2, either move the S1 citation earlier when scientifically logical or rename that item S1 and update every cross-reference, caption, file name, and callout. Never accept S2-before-S1 merely because the assets were created in that order.
 - Keep panel markers as `(a) Title` with one space between marker and title, both in the image and caption.
 - Verify that a reader can find every referenced SI section without encountering an undefined prerequisite.
+
+For panel callouts, use the following grammar:
+
+- one panel: `Fig. 2a`;
+- two panels: `Figs. 2a` + regular-weight ` and ` + bold `b`;
+- a continuous range: `Figs. 2a–c`;
+- non-contiguous panels: bold each reference token while commas and `and` remain regular.
+
+Literal Word run maps for ambiguous cases:
+
+- regular `(` + bold `Fig. S1a` + regular `)`;
+- bold `Figs. 2a` + regular `, ` + bold `c` + regular ` and ` + bold `e`;
+- bold `Figs. 2` + regular ` and ` + bold `3`.
+
+The automated validator is a structural preflight; a human or agent must still inspect the run boundaries of later bare panel identifiers in compound references.
+
+In the actual DOCX, apply bold to the Word runs or cross-reference fields. Markdown asterisks are examples only and must never appear in the delivered file.
 

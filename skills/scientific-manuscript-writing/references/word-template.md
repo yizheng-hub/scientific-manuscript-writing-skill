@@ -21,7 +21,7 @@ When authoring a deliverable, copy the template and retain only the relevant par
 - Figure captions, table text/notes, and references: 11 pt.
 - Place each figure in a centered figure paragraph with 12 pt space before and 0 pt after. Preserve its aspect ratio and final publication width.
 - Set each figure caption to 0 pt before and 12 pt after. Do not insert blank paragraphs to simulate figure or caption spacing.
-- Figure/table/section/panel cross-references use the bold treatment demonstrated by the template.
+- Every Figure, Table, Section, and panel cross-reference in the main manuscript and SI uses the bold treatment demonstrated by the template, including references from the main text into SI and references within SI. Parentheses, commas, semicolons, and conjunctions remain regular weight.
 - Continuous line numbering and centered page numbers are enabled for review copies.
 - Captions use `(a)`, `(b)`, ... and include independent abbreviation definitions.
 
@@ -40,10 +40,22 @@ When authoring a deliverable, copy the template and retain only the relevant par
 
 ## Equations
 
-- Use native editable Word equations (OMML/Word Equation), not plain-text approximations or raster images, whenever an equation must remain editable.
+- Use native editable Word equations (OMML/Word Equation), not plain-text approximations, screenshots, SVG/EMF pictures, or raster images. An equation stored as any image object is a structural failure, even when it looks sharp in the rendered page.
 - Place each display equation in a borderless, unshaded one-row, two-column table. Use a wide left cell for the centered equation and a narrow right cell for the number in the form `Eq. (1)`.
 - Vertically center both cells. Keep the number aligned consistently and update it sequentially according to the target journal. Do not simulate the layout with spaces or tab stops.
 - Keep inline equations as native Word equation objects within the sentence.
+- Every display equation receives a sequential number unless the target journal explicitly exempts a specific equation class. A native equation placed as a stand-alone paragraph outside the two-cell container fails the house style.
+
+## Cross-reference grammar and bold runs
+
+- One panel: bold `Fig. 2a`.
+- Two panels: bold `Figs. 2a`, regular ` and `, and bold `b`. Implement these as separate Word runs. Do not write `Fig. 2a,b`, `Fig. 2a and b`, or bold the conjunction.
+- A continuous panel range may be written as bold `Figs. 2a–c`. For non-contiguous panels, bold each reference token while keeping commas and `and` regular.
+- Apply the same run-level rule to multiple Figures, Tables, and Sections. The object label and identifier are bold; connecting prose and punctuation are not.
+- Compound examples: regular `(` + bold `Fig. S1a` + regular `)`; bold `Figs. 2a` + regular `, ` + bold `c` + regular ` and ` + bold `e`; bold `Figs. 2` + regular ` and ` + bold `3`.
+- Use `Fig. S1` and `Table S1` for supplementary objects. Number top-level SI headings `S1. [Topic]`, `S2. [Topic]`, ... and cite them as `Section S1`, `Section S2`, .... Do not use `Supplementary Fig. 1`, `Supplementary Figure 1`, `Supplementary Section 1`, or a supplementary number without the `S` prefix.
+- Cross-reference formatting must be applied to the actual Word runs or fields, not simulated with Markdown asterisks. Recheck it after fields are updated or materialized.
+- Give every inserted figure explicit figure-role alt text such as `Figure 2`. Generic `Picture 1` metadata is not sufficient for the structural preflight because it cannot distinguish a real figure from a rasterized equation.
 
 The template was distilled from supplied manuscript-format references and then rewritten with generic placeholders. It deliberately omits project-specific text and Extended Data.
 
@@ -55,8 +67,8 @@ The template was distilled from supplied manuscript-format references and then r
 4. Preserve figure aspect ratios. Check that every figure and caption fits the page without overlap or clipping.
 5. Use one journal-appropriate caption placement, never a duplicated caption list plus repeated full captions unless the journal explicitly requires both. Use dynamic numbering/cross-references where the workflow supports them; otherwise run an explicit numbering audit.
 6. Update fields, page numbers, line numbers, bookmarks, cross-references, and numbering.
-7. Run a programmatic DOCX preflight for unresolved placeholders; tracked changes, comments, hidden text, and metadata; broken fields, bookmarks, cross-references, hyperlinks, or numbering; style/template deviations; native-equation integrity; borderless two-cell display-equation layout and sequential `Eq. (n)` numbering; exact three-line data-table borders and 11 pt Times New Roman table text; paragraph pagination properties that create left-margin black squares; table overflow; image aspect ratio and effective resolution; and missing fonts.
-8. Compare style names and key properties against the retained template, then render the final DOCX to page images, inspect every page at 100%, fix defects, and rerender until clean. A file does not pass merely because the font family and point size look similar.
+7. Run a programmatic DOCX preflight for unresolved placeholders; tracked changes, comments, hidden text, and metadata; broken fields, bookmarks, cross-references, hyperlinks, or numbering; style/template deviations; rasterized or unnumbered equations; native-equation integrity; borderless two-cell display-equation layout and sequential `Eq. (n)` numbering; exact supplementary naming; cross-reference grammar and run-level bold boundaries; exact three-line data-table borders and 11 pt Times New Roman table text; paragraph pagination properties that create left-margin black squares; table overflow; image aspect ratio and effective resolution; and missing fonts.
+8. Compare style names and key properties against the retained template, then render the final DOCX to page images, inspect every page at 100%, fix defects, and rerender until clean. Manually inspect compound cross-reference run boundaries because automated checks cannot prove every later bare panel token is bold. A file does not pass merely because the font family and point size look similar.
 
-Run `python scripts/validate_docx.py <deliverable.docx>` from the skill directory as part of step 7. Fix every reported structural failure, then complete the render-and-inspect gate; the script does not replace visual page review.
+Run `python scripts/validate_docx.py <deliverable.docx>` from the skill directory as part of step 7. The script enforces this retained house template. If an explicit journal template overrides a reported house rule, record that override and audit the substituted journal rule rather than silently ignoring the failure. Fix every remaining structural failure, then complete the render-and-inspect gate; the script does not replace visual page review.
 

@@ -6,6 +6,17 @@ Plan the paper as a sequence of visual evidence. Before plotting, create a portf
 
 Panel count is evidence-driven. Build substantial multi-panel figures when complementary views are needed, but never add a panel merely to reach a count or split one weak chart into several cosmetic variants.
 
+## Methods framework and conceptual figures
+
+A Methods framework is allowed only when it explains a scientific or computational relation that prose cannot show as clearly. It must be designed as a publication figure, not as a generic slide diagram.
+
+- Do not use a row of rounded colored cards, repeated text boxes, decorative gradients, or template-style arrows as a substitute for scientific structure.
+- Show the minimum necessary entities, transformations, inputs, outputs, and dependencies. Prefer short labels, mathematical symbols, data-shaped glyphs, or compact schematics over sentences copied from Methods.
+- Show the study-specific logic needed to judge validity: independent units, controls or comparators, train/validation/test or other data splits, leakage barriers, estimand, calibration/validation, uncertainty propagation, and which outputs are observed, estimated, inferred, or predicted, as applicable. A visually clean framework that hides these relations fails.
+- Stage letters inside boxes are not panel labels. A single schematic may use unlettered stages; a genuinely multi-panel framework must place the exact `(a) Title`, `(b) Title`, ... headers outside the panel content.
+- Use restrained semantic color, consistent line weight, direct connectors, and a clear reading path. Arrows may not cross text, boxes, or each other without a routing reason.
+- Apply the same Times New Roman typography, final-size legibility, compactness, caption, and zero-overlap gates as data figures. Reject a framework that looks like presentation software even when its content is technically correct.
+
 ## Choose the graphic from the scientific relation
 
 Prefer displays that reveal the structure the reader must evaluate:
@@ -24,7 +35,7 @@ Prefer displays that reveal the structure the reader must evaluate:
 
 Do not default an entire figure set to simple line, point-line, lollipop, heatmap, bar, or column plots because they are easy to code. Use them when they are the clearest representation, not as the repeated grammar of the paper. A heatmap is appropriate for a genuinely dense matrix whose two-dimensional pattern matters; it is not the default container for a small table of values. A dot-line plot is appropriate for ordered, paired, or interval information; it is not a generic replacement for every result. Visual sophistication comes from an appropriate evidence structure, layered but interpretable encodings, and disciplined hierarchy—not ornament.
 
-For a central result, reject an isolated default line, point, bar, or column chart when the available evidence can also show uncertainty, distribution, composition, spatial heterogeneity, scenario structure, mechanism, or validation. The elementary mark may remain simple; the finished figure should coordinate the complementary layers needed to support the claim. A single simple chart is acceptable only when it is genuinely sufficient for one decisive comparison and adding another layer would not change interpretation.
+For a central result, reject an isolated default line, point, bar, or column chart when complementary uncertainty, distribution, composition, spatial heterogeneity, scenario structure, mechanism, or validation evidence is necessary to judge the claim or materially changes its interpretation. The elementary mark may remain simple; the finished figure should coordinate only the layers needed to support the claim. A single simple chart is acceptable when it is genuinely sufficient for one decisive comparison.
 
 When local reference figures are available, use them as a visual grammar rather than as content to copy: emulate their dense but readable multi-panel composition, restrained palette, layered encodings, map or distribution emphasis where scientifically appropriate, and compact use of horizontal space. Preserve the new study's actual data relationships and never force an unsuitable chart merely to resemble a reference.
 
@@ -32,7 +43,7 @@ When local reference figures are available, use them as a visual grammar rather 
 
 Translate reference quality into structure, not decoration.
 
-- Establish one visual anchor: a dominant map, response surface, trajectory, distribution, or mechanism panel should carry the main claim. Supporting panels explain scale, uncertainty, mechanism, comparison, or local detail.
+- When the evidence is asymmetric, establish one visual anchor: a dominant map, response surface, trajectory, distribution, or mechanism panel carries the main claim while supporting panels explain scale, uncertainty, comparison, or local detail. Matched experiments, scenario panels, or coequal maps may instead use equal visual weight when direct comparison is the reading task.
 - Build a cross-scale reading path: overview to regional detail, global pattern to mechanism, temporal trend to spatial consequence, or distribution to effect estimate. Use insets, connectors, aligned axes, and shared legends only when they make that path explicit.
 - Mix complementary chart families inside a figure instead of cloning one panel type. Heterogeneous panels should answer one question, share typography and color semantics, and remain visually comparable.
 - Encode data through position first, then restrained color, size, shape, line, texture, or transparency. Every encoding must be defined and interpretable; decorative layers fail.
@@ -53,6 +64,29 @@ High information density means that most of the canvas carries readable evidence
 - Treat edge use as a preflight. After labels and legends are included, unnecessary outer margins should normally be only a few percent of the canvas, panel gaps should be visually consistent, and no large quadrant should remain blank because plots were undersized. These are diagnostic targets, not permission to clip labels.
 - Export with a tight bounding box only after checking that panel headers, map insets, color bars, scale bars, north arrows, and legend glyphs remain complete. A cropped character or symbol is a failure even when whitespace is reduced.
 - Preserve a clear hierarchy at thumbnail size and readable labels at final size. If density is achieved only by shrinking text, the layout has failed.
+
+## Panel occupancy, figure height, and spacing
+
+Audit the data envelope and the allocated panel rectangle separately. Sparse evidence must not be stretched across a large panel merely because the default subplot grid assigned that space.
+
+- After transformations, uncertainty, thresholds, and annotations are included, compare the finite data envelope with the allocated panel rectangle. Treat visually dominant unused space as a redesign trigger when it does not serve a reading task. Do not use an occupancy percentage as a quota and never tighten an axis merely to make marks fill the panel.
+- Tighten limits, change orientation, use a compact strip or inset, combine aligned summaries, or reduce the panel/figure height before accepting large internal blank regions. Never crop meaningful uncertainty, hide an outlier, or change a common scale merely to improve occupancy.
+- Panels with only a few points or categories should normally receive less area when their evidentiary role is also secondary. A sparse decisive estimate may remain the visual anchor. For a secondary sparse row, use deliberate `height_ratios`, shorter axes, or a shorter total figure height rather than leaving most of each panel empty.
+- Measure horizontal and vertical gaps after tick labels, axis labels, and legends are present. A large blank band is a failure when it results from automatic padding or undersized plots; it is valid when fixed aspect, deliberate group separation, a shared comparison scale, or another reading task requires it.
+- Do not place the first column far from the second merely because an automatic layout reserved excessive label space. Adjust axes rectangles and label padding explicitly while preserving alignment.
+
+Scientific comparison, honest baselines, uncertainty, and shared scales take priority over compactness. When a deliberately sparse range is retained, state its reading purpose in the panel manifest.
+
+## Axis and grid scaffold
+
+Choose one figure-level scaffold before styling individual panels.
+
+- Comparable Cartesian panels must use the same spine policy, tick direction, tick length, grid direction, grid color, line width, and alpha. Default to visible left and bottom axes for quantitative Cartesian panels unless another convention is justified.
+- Do not show pale dashed or solid gridlines in some comparable panels while leaving others blank by accident. Use either no grid or one restrained major-grid treatment consistently; reference thresholds are not gridlines and must remain visually distinct.
+- Axis omission is acceptable for maps, matrices, pictograms, diagrams, or intentionally axis-free distributions. It must be consistent within the same chart family and must not remove a quantitative scale the reader needs.
+- When panels use different chart families, consistency means a coherent visual grammar rather than identical furniture. Record intentional exceptions in the panel manifest and verify that they do not look like missing axes.
+- Preserve axis integrity before styling. Use zero when magnitude-from-zero is part of the task; otherwise show the scientifically relevant range without implying a false baseline. Label log, reciprocal, normalized, indexed, or other transformed axes explicitly. Avoid broken axes; if unavoidable, mark the break unambiguously and never use it to exaggerate a difference. Avoid dual axes unless the relation cannot be read more honestly as aligned panels, and map each series to its axis unmistakably.
+- Comparable panels should share limits, transformations, tick locations, and color normalization when readers must compare absolute values. If different limits are scientifically necessary, make the difference conspicuous. Diverging scales require a meaningful stated midpoint; clipped color scales and saturated values must be disclosed in the legend or caption.
 
 ## Conditional advanced encodings
 
@@ -77,7 +111,7 @@ Review all main and supplementary figures together before accepting any one figu
 - Judge complexity at the level of the evidence composition, not the individual mark. Lines, points, bars, cells, contours, and polygons become publication-level when their coordinated roles reveal trajectory, distribution, scale, mechanism, or uncertainty without redundancy.
 - Reject a portfolio made mainly of diagnostic matrices, sparse scatters, simple bars, or point-line panels when the data support richer distributional, spatial, relational, or multiscale views.
 - Use visual complexity only when every encoding answers a scientific question. “Advanced” never means decorative complexity or more colors.
-- Reject a main-figure portfolio when more than half of its figures use the same dominant chart family or identical panel grid without a direct-comparison rationale. This is a diagnostic threshold, not a quota: fewer repetitions may still fail when they make the story visually monotonous.
+- Review main-figure variety separately from SI. Repetition is justified for direct comparison, especially across SI sensitivity analyses or matched cohorts; change chart families only when the data relation or reading task changes. Reject monotony that comes from default plotting, not a repeated grammar that improves valid comparison.
 - Do not make every figure equally dense. Use the richest multi-panel compositions for central evidence and simpler figures for single decisive comparisons, while maintaining the same typography, palette semantics, and finish.
 
 ## Geographic evidence
@@ -92,10 +126,12 @@ When valid coordinates, boundaries, networks, regions, or spatial exposure varia
 
 ## House style
 
+These are hard defaults for this retained house style. An explicit target-journal rule or user-supplied figure template may override typography or panel-header syntax; record the override and apply it consistently across the complete figure set.
+
 - Times New Roman throughout every visible text element, including panel labels, titles, axes, ticks, annotations, legends, color bars, map labels, and inset labels. Default body labels: 11 pt; panel titles: 12 pt bold. If final-size constraints require 9/10 pt, change the entire figure set consistently rather than shrinking isolated figures.
 - Panel labels and titles must appear as one header in the exact form `(a) Title`, with lowercase sequential letters, parentheses, and one space. A bare `a`, a separated panel letter, or a title without its marker fails preflight. Align headers within rows/columns when their roles are parallel.
 - Use black regular text and coordinated low-saturation, color-blind-aware palettes. A useful starting family is muted blue `#5B8DB8`, teal-green `#4F9C91`, purple `#8C7AA9`, muted red `#D77A72`, ochre `#D5A94E`, and neutral gray `#A9B0B5`. Select only colors with defined semantics; do not use the full palette merely for variety. Pair red/green distinctions with shape, line, or texture cues.
-- Legends have no border or background. Place them in genuine empty space or reserve a legend region; never cover data, labels, error bars, axes, or another panel.
+- Legends have no border. Prefer a transparent legend in genuine empty space or a reserved legend region; on a dense map, contour, or field, a compact neutral opaque or haloed background is allowed when it improves contrast without hiding evidence. Never cover data, labels, error bars, axes, or another panel.
 - A bubble-size legend must use the same area scaling as the plotted bubbles. Separate size and color legends when they encode different quantities.
 - Maps should be large enough to carry the spatial argument. A dominant map may occupy at least twice the area of one supporting panel. Use shared extent, normalization, and legend semantics for comparable maps. Inset maps need source boxes and connectors.
 - Keep axis lines, units, tick conventions, and comparable panel sizes consistent. Align same-row x labels and same-column y labels.
@@ -106,13 +142,15 @@ When valid coordinates, boundaries, networks, regions, or spatial exposure varia
 
 At final publication size, inspect every panel for legend/data, legend/text, label/error-bar, title/panel, and adjacent-panel overlap; clipped labels, symbols, color bars, or annotations; inconsistent axes; excessive blank space; unreadable fonts after Word placement; distorted aspect ratio; inconsistent color meaning or duplicate legends; missing parentheses in panel headers; non-Times New Roman text; and internal audit terms, code names, failure labels, or process status.
 
-Fix layout, text length, axis range, legend placement, or panel allocation before reducing font size. Treat any text–text, text–graphic, graphic–graphic, legend–data, or cross-panel collision as a failed figure, even if the overlapping elements remain partly readable.
+Fix layout, text length, axis range, legend placement, or panel allocation before reducing font size. Treat any unintended text–text, text–graphic, legend–data, or cross-panel occlusion that hides evidence or changes interpretation as a failed figure. Intentional graphic layering—such as markers on lines, confidence bands, error bars, contours, networks, or map overlays—is valid when every layer remains interpretable.
+
+Annotation text may not touch or cross tick labels, tick marks, axis spines, threshold lines, markers, error bars, or another annotation. It may sit over a background grid only when an opaque or haloed text treatment keeps both the label and data unambiguous. After `fig.canvas.draw()`, inspect rendered bounding boxes for every title, tick label, axis label, annotation, legend, and color-bar label; use explicit offsets or reserved space to eliminate unintended intersections. Automated geometry is a preflight, not a substitute for final visual inspection.
 
 Inspect the exported asset at its final physical size. Verify raster DPI or vector output, font embedding, stroke widths, clipping, transparency and color mode, contrast and color-blind legibility, grayscale readability, preserved aspect ratio, and agreement between plotted values and verified source tables. The export—not only the notebook canvas—must pass.
 
 ## Figure-to-text gate
 
-- Cite and analyze every panel in the main manuscript or corresponding SI section.
+- Cite every panel in the main manuscript or corresponding SI section. Analyze distinct evidentiary roles individually; a systematic small-multiple, matched cohort, or repeated sensitivity series may be addressed as an explicit panel range or logically defined group when the caption enumerates its members and the prose explains the group-level pattern rather than reciting panels mechanically.
 - Explain the relationship among panels, not only what each panel contains.
 - Confirm that the caption independently defines the visual encoding and abbreviations.
 - Confirm that the plotted numbers match the verified result tables and that the plotting notebook recreates the delivered asset.

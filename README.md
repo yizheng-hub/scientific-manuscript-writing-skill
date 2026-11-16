@@ -12,12 +12,13 @@ The skill emphasizes:
 
 - a single, explicit innovation and contribution across the title, abstract, introduction, results, discussion, and cover letter;
 - simple English, funnel-shaped abstracts and introductions, and removal of defensive AI-style prose;
+- discovery-led prose that excludes code variables, trial logs, tuning chronology, and project-report narration from the manuscript;
 - figure-led results in which every results panel is data-backed, cited, and interpreted in order;
 - independently readable SI sections with figures and tables interspersed in the narrative;
 - self-contained captions, independent abbreviation definitions, and verified citation support;
-- reproducible `plot.ipynb` figure generation and a strict zero-overlap visual gate;
+- reproducible `plot.ipynb` figure generation, task-based whitespace and height checks, axis-integrity rules, compact panel engineering, and a strict unintended-occlusion gate;
 - three-line Word tables, native editable equations, first-citation supplementary numbering, and a no-black-square DOCX preflight;
-- role-based cold reads by an editor, broad reviewer, technical reviewer, general reader, novice reader, and high-school/news reader;
+- independent-agent cold reads by an academic editor, broad reviewer, field expert, technical reviewer, cross-disciplinary reader, in-field novice, and high-school/news reader, followed by conflict-aware integration;
 - a generic `Manuscript Template.docx` retaining the house Word styles for main text, SI, and a cover letter.
 
 Extended Data is intentionally not part of the default structure because it is journal-specific. Add it only when the target journal requires it.
@@ -97,7 +98,7 @@ For the best result, provide the target journal and article type; current manusc
 - `skills/scientific-manuscript-writing/assets/Manuscript Template.docx`: de-identified master Word template.
 - `skills/scientific-manuscript-writing/assets/visual-exemplars/`: original synthetic figure exemplars showing map-led hierarchy and mixed evidence grammar without copying any study.
 - `skills/scientific-manuscript-writing/scripts/build_visual_exemplars.py`: reproducible generator for the original synthetic figure exemplars.
-- `skills/scientific-manuscript-writing/scripts/validate_docx.py`: structural preflight for fonts, three-line tables, native equation layout, first-citation supplementary numbering, and black-square paragraph properties.
+- `skills/scientific-manuscript-writing/scripts/validate_docx.py`: structural preflight for fonts, three-line tables, rasterized equations, native equation layout and numbering, supplementary naming/order, cross-reference grammar and bold runs, and black-square paragraph properties.
 
 ## 中文快速使用
 
